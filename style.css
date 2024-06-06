@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+
+    /* background-color: red; */
+}
+
+#wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(163, 245, 245);
+    position: absolute;
+
+}
+#login-cont{
+
+   width: 20vw;
+   border:1px solid black;
+   /* transform: translate(-50%,-50%);  */
+   margin: 40vh 40vw;  
+   background-color: aliceblue;
+   padding: 10px 30px 40px 30px ;
+   overflow: hidden;
+
+
+}
+
+#login-cont h1{
+ text-align: center;
+ font-size: 1.5vw;   
+
+}
+#login-cont button{
+
+    margin-top: 20px;
+    padding: 0.2px;
+    font-weight: 600;
+}
+#login-cont input{
+    margin-top: 10px;
+    padding: 5px;
+}
+#login-cont span{
+    font-size: 1vw;
+}
