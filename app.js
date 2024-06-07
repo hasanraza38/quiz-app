@@ -3,6 +3,8 @@ const email =document.querySelector('#email')
 const password =document.querySelector('#password')
 const loginBtn =document.querySelector('#login-btn')
 
+let userData = localStorage.setItem('user',JSON.stringify())
+let userArr;
 
 
 
@@ -23,5 +25,36 @@ loginBtn.addEventListener('click',(e) => {
     console.log(email.value);
     console.log(password.value);
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Setting sample cart items in local storage
+// let sampleCartItems = [
+//     { id: 1, name: 'Apple', quantity: 2 },
+//     { id: 2, name: 'Banana', quantity: 3 }
+// ];
+
+// console.log(localStorage.setItem('cart', sampleCartItems)) ;
+
+// // Your original code
+// let arr;
+// let items = JSON.parse(localStorage.getItem('cartItems'));  // Retrieving 'cartItems' from local storage
+
+// if(items === null){
+//     arr = [];
+// }else{
+//     arr = items;
+//     console.log(arr);  // This will print the items retrieved from local storage
+// }
 
 
