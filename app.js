@@ -1,13 +1,16 @@
+
+             // login
+            //  document.addEventListener('DOMContentLoaded', () => {
 const form =document.querySelector('form')
 const email =document.querySelector('#email')
 const password =document.querySelector('#password')
-const loginBtn =document.querySelector('#login-btn')
+const loginBtn =document.querySelector('#login_btn')
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 
-loginBtn.addEventListener('click',(e) => {
-    e.preventDefault()
+  loginBtn.addEventListener('click',(evt) => {
+    evt.preventDefault()
  
         if (emailRegex.test(email.value) && passwordRegex.test(password.value)) {
 
@@ -29,12 +32,16 @@ loginBtn.addEventListener('click',(e) => {
                         localStorage.setItem('loginInfo',JSON.stringify(userArr))
                         console.log(userArr);
                         email.value=''
-                        password.value=''        
+                        password.value=''   
+             
+alert('login successfully')
             
         }
     else{
         alert('please enter valid email or password')
     }
-                        
+                    
 })
+
+
 
