@@ -3,44 +3,38 @@ const email =document.querySelector('#email')
 const password =document.querySelector('#password')
 const loginBtn =document.querySelector('#login-btn')
 
-
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 
-
-
 loginBtn.addEventListener('click',(e) => {
     e.preventDefault()
-    
-    
-    let user ={
-        email : email.value,
-        password : password.value,
-        }
-        // console.log(user);
-        
-        let userData = JSON.parse(localStorage.getItem('loginInfo'))
-        
-        let userArr=userData||[];
-        if (email.value||password.value=== null) {
-            alert('please fil the feilds')            
-        } else {
+ 
+        if (emailRegex.test(email.value) && passwordRegex.test(password.value)) {
 
-            userArr.push(user)
-       
-                console.log(userArr);
-                // userArr===null? userArr=[]:userArr.push(userData)
+            let user ={
+                email : email.value,
+                password : password.value,
+                }
+                // console.log(user);
                 
-                localStorage.setItem('loginInfo',JSON.stringify(userArr))
-                console.log(userArr);
-                email.value=''
-                password.value=''
+                let userData = JSON.parse(localStorage.getItem('loginInfo'))
                 
+                let userArr=userData||[];
+                
+        
+                    userArr.push(user)
+               
+                        console.log(userArr);
+                        
+                        localStorage.setItem('loginInfo',JSON.stringify(userArr))
+                        console.log(userArr);
+                        email.value=''
+                        password.value=''        
             
         }
-        
-        
-                
+    else{
+        alert('please enter valid email or password')
+    }
+                        
 })
-
 
