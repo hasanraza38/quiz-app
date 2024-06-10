@@ -34,7 +34,8 @@ const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
                         email.value=''
                         password.value=''   
              
-alert('login successfully')
+// alert('login successfully')
+window.location('register.html')
             
         }
     else{
