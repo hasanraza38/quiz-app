@@ -1,6 +1,5 @@
 
              // login
-            //  document.addEventListener('DOMContentLoaded', () => {
 const form =document.querySelector('form')
 const email =document.querySelector('#email')
 const password =document.querySelector('#password')
@@ -34,8 +33,8 @@ const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
                         email.value=''
                         password.value=''   
              
-// alert('login successfully')
-window.location('register.html')
+alert('login successfully')
+window.location='./quiz.html'
             
         }
     else{

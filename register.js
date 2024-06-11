@@ -16,9 +16,9 @@
  
  registerBtn.addEventListener('click',(event)=>{
    event.preventDefault();
-  //  window.location('index.html')
 
-  if (registerEmailRegex.test(registerEmail.value) && registerPasswordRegex.test(registerPassword.value) && usernameRegex.test(registerUserName.value))   {
+   
+   if (registerEmailRegex.test(registerEmail.value) && registerPasswordRegex.test(registerPassword.value) && usernameRegex.test(registerUserName.value))   {
 
     
     let registerUser ={
@@ -27,29 +27,31 @@
         userName :registerUserName.value,
         }
         // console.log(user);
-        
+  
         let registerUserData = JSON.parse(localStorage.getItem('signUpInfo'))
-        
+  
         let registerUserArr=registerUserData||[];
-        
-
+  
+  
             registerUserArr.push(registerUser)
-       
+  
                 // console.log(registerUserArr);
-                
+  
                 localStorage.setItem('signUpinfo',JSON.stringify(registerUserArr))
                 console.log(registerUserArr);
                 registerEmail.value=''
                 registerPassword.value=''   
                 registerUserName.value=''   
                 
-
-// alert('registered successfully')
+  
+  alert('registered successfully')
+  
+  window.location='./quiz.html'
+  
+  }
+  
+  else{
+    alert('please enter valid information')
+    }
     
-}
-
-else{
-alert('please enter valid information')
-}
-
- })         
+    })         
